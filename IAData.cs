@@ -57,6 +57,7 @@ namespace SyncData
 
         private void SetData()
         {
+            IADataClassessDataContext db = new IADataClassessDataContext();
             DataTable BillData = new DataTable();
             BillData.Columns.Add("DOC_ID", typeof(long));
             BillData.Columns.Add("BCARD", typeof(string));
@@ -77,6 +78,22 @@ namespace SyncData
                     item.BonusLimit, item.BonusPay, item.DCard, item.Discount, item.Payment, item.Saletype, item.SmenId);
 
 
+              /*  BILL bill = new BILL();
+                bill.DOC_ID = item.DocId;
+                bill.BCARD = item.BCard;
+                bill.BCARD_TYPE = Convert.ToInt16(item.BCardType);
+                bill.BONUS_ADD = item.BonusAdd;
+                bill.BONUS_BEFORE = item.BonusBefore;
+                bill.BONUS_ENABLE = item.BonusEnable;
+                bill.BONUS_LIMIT = item.BonusLimit;
+                bill.BONUS_PAY = item.BonusPay;
+                bill.DCARD = item.DCard;
+                bill.DISCOUNT = Convert.ToDecimal(item.Discount);
+                bill.PAYMENT = item.Payment;
+                bill.SALETYPE = item.Saletype;
+                bill.SMEN_ID = item.SmenId;
+                db.BILLs.InsertOnSubmit(bill);
+                db.SubmitChanges();*/
             }
             string MSConnectionStr = "data source=192.168.1.39;persist security info=True;" +
                 "user id=ftp;password=Sekret123;" +
