@@ -15,6 +15,7 @@ namespace SyncData
         private string _enddt = DateTime.Now.ToString("dd.MM.yyyy 23:59");
         public List<IABillsHelper> BillsData;
 
+
         public IAData()
         {
             BillsData = new List<IABillsHelper>();
